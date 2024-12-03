@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Classification</title>
+    <link rel="stylesheet" href="path/to/bootstrap.css"> <!-- Optional if using Bootstrap -->
+</head>
+<body>
+    <div class="login">
+        <h1>News Classification</h1>
+        <form action="{{ url_for('predict_news') }}" method="post">
+            <div class="mb-3">
+                <label class="form-label">Enter the news here</label>
+                <input class="form-control" type="text" name="news_text" placeholder="Enter news text" required>
+            </div>
+        
+            <div class="mb-3">
+                <input class="btn btn-primary" type="submit" value="Predict">
+            </div>
+        </form>
+
+        <h2>
+            THE News is: {{results}}
+        </h2>
+    </div>
+</body>
+</html>
